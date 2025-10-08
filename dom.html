@@ -134,58 +134,58 @@
     // ===== EXERCISE 1 =====
     // Goal: change #welcome text to “Hello, DOM!” using getElementById.
     // TODO: Select the element and set its textContent.
-    const welcome = ...
+    const welcome = document.getElementById("welcome");
     if (!welcome) console.error("EX1: #welcome not found");
-    else { /* set textContent */ }
+    else { welcome.textContent = "Hello, DOM!"; }
 
     // ===== EXERCISE 2 =====
     // Goal: Using querySelector(".note"), select ONLY the first .note and add 'highlight' class.
-    // const firstNote = ...
-    // if (!firstNote) console.error("EX2: first .note not found");
-    // else { /* add class 'highlight' */ }
+    const secondNote = document.querySelector("#ex2 .note:nth-of-type(2)");
+    if (!secondNote) console.error("EX2: second .note not found");
+    else { secondNote.classList.add("highlight"); }
 
     // ===== EXERCISE 3 =====
     // Goal: Using querySelector("#profile .value"), set the first value to "Ari".
-    // const firstValue = ...
-    // if (!firstValue) console.error("EX3: #profile .value not found");
-    // else { /* set textContent to "Ari" */ }
+    const firstValue = document.querySelector("#profile .value");
+    if (!firstValue) console.error("EX3: #profile .value not found");
+    else { firstValue.textContent = "Ari"; }
 
     // ===== EXERCISE 4 =====
     // Goal: Select the link with data-test="syllabus" and set href to "/docs/syllabus.pdf".
     // Hint: Attribute selector syntax: a[data-test="syllabus"]
-    // const syllabusLink = ...
-    // if (!syllabusLink) console.error("EX4: syllabus link not found");
-    // else { /* setAttribute('href', '/docs/syllabus.pdf') */ }
+    const syllabusLink = document.querySelector('a[data-test="syllabus"]');
+    if (!syllabusLink) console.error("EX4: syllabus link not found");
+    else { syllabusLink.setAttribute('href', '/docs/syllabus.pdf'); }
 
     // ===== EXERCISE 5 =====
     // Goal: Use getElementById to update #statusLine text to "Status: ready" and remove class 'muted'.
-    // const statusLine = ...
-    // if (!statusLine) console.error("EX5: #statusLine not found");
-    // else {
-    //   // set textContent
-    //   // remove 'muted' class (use classList.remove)
-    // }
+    const statusLine = document.getElementById("statusLine");
+    if (!statusLine) console.error("EX5: #statusLine not found");
+    else {
+      statusLine.textContent = "Status: ready";
+      statusLine.classList.remove("muted");
+    }
 
     // ===== EXERCISE 6 =====
     // Goal: Select the strong.label inside the SECOND list item and make it red.
     // Hint: Use :nth-child(2) then a descendant selector for strong.label.
-    // const secondStrong = ...
-    // if (!secondStrong) console.error("EX6: second strong.label not found");
-    // else { /* secondStrong.style.color = 'red' */ }
+    const secondStrong = document.querySelector("li:nth-child(2) strong.label");
+    if (!secondStrong) console.error("EX6: second strong.label not found");
+    else { secondStrong.style.color = 'red'; }
 
     // ===== EXERCISE 7 =====
     // Goal: Select the FIRST product name and append " (Featured)".
     // Hint: ".product .name" matches names; querySelector returns the first match.
-    // const firstProductName = ...
-    // if (!firstProductName) console.error("EX7: first product name not found");
-    // else { /* firstProductName.textContent += " (Featured)" */ }
+    const firstProductName = document.querySelector(".product .name");
+    if (!firstProductName) console.error("EX7: first product name not found");
+    else { firstProductName.textContent += " (Featured)"; }
 
     // ===== EXERCISE 8 =====
     // Goal: Read text from #sourceText and copy it into #targetText.
-    // const src = ...
-    // const dst = ...
-    // if (!src || !dst) console.error("EX8: source or target not found");
-    // else { /* dst.textContent = src.textContent */ }
+    const src = document.getElementById("sourceText");
+    const dst = document.getElementById("targetText");
+    if (!src || !dst) console.error("EX8: source or target not found");
+    else { dst.textContent = src.textContent; }
 
     /*************************************************
      * Instructor Notes (optional to show students):
